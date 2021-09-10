@@ -1,0 +1,16 @@
+.bounce {
+  animation-name: bounce !important;
+  animation-timing-function: ease !important;
+  color: black;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0) !important;
+  }
+  50% {
+    transform: translateY(-1000px) !important;
+  }
+  100% {
+    transform: translateY(0) !important;
+  }
+}

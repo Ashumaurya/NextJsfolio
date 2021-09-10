@@ -1,11 +1,4 @@
-import {
-  Box,
-  IconButton,
-  Paper,
-  Tabs,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { Box, IconButton, Tabs, Toolbar, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { useContext, useState } from "react";
 import { DarkMode } from "../../../pages/api/theme";
@@ -24,6 +17,7 @@ const StyledTabs = styled((props) => (
     justifyContent: "center",
     backgroundColor: "transparent",
     height: 5,
+    color: "default",
   },
   "& .MuiTabs-indicatorSpan": {
     maxWidth: 5,
@@ -34,22 +28,20 @@ const StyledTabs = styled((props) => (
   },
 }));
 
-const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
-  ({ theme }) => ({
-    textTransform: "none",
-    fontWeight: theme.typography.fontWeightMedium,
-    fontSize: theme.typography.pxToRem(15),
-    marginRight: theme.spacing(1),
-    color: "inherit",
-    "&.Mui-selected": {
-      color: theme.palette.mode === "light" ? "#000" : "#fff",
-      fontWeight: theme.typography.fontWeightBold,
-    },
-    "&.Mui-focusVisible": {
-      backgroundColor: "rgba(100, 95, 228, 0.32)",
-    },
-  })
-);
+const StyledTab = styled((props) => <Tab {...props} />)(({ theme }) => ({
+  textTransform: "none",
+  fontWeight: theme.typography.fontWeightMedium,
+  fontSize: theme.typography.pxToRem(16),
+  marginRight: theme.spacing(1),
+  color: "inherit",
+  "&.Mui-selected": {
+    color: theme.palette.mode === "light" ? "#000" : "#fff",
+    fontWeight: theme.typography.fontWeightBold,
+  },
+  "&.Mui-focusVisible": {
+    backgroundColor: "rgba(100, 95, 228, 0.32)",
+  },
+}));
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useContext(DarkMode);
   const [value, setValue] = useState(0);
@@ -68,7 +60,7 @@ const Navbar = () => {
           <StyledTabs value={value} onChange={handleChange} textColor="primary">
             <StyledTab label="HOME" />
             <StyledTab label="ABOUT" />
-            <StyledTab label="WORK" />
+            <StyledTab label="WORKS" />
             <StyledTab label="BLOG" />
             <StyledTab label="CONTACT" />
           </StyledTabs>

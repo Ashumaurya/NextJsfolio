@@ -10,8 +10,8 @@ import { Grid, Switch } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import { DarkMode } from "./api/theme";
-import navbar from "../components/layout/navbar";
-import Navbar from "../components/layout/navbar";
+import navbar from "../components/layout/Navbar/desktopNav.js";
+import Navbar from "../components/layout/Navbar/desktopNav.js";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
