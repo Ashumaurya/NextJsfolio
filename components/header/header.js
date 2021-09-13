@@ -72,8 +72,8 @@ const Header = () => {
             </Typography>
             <Box sx={{ margin: "1rem 0" }}>
               <Typography variant="body2" fontSize="large">
-                Hi I'm Ashish Maurya. A passionate Developer and a Programmer
-                based in the India.
+                Hi I&apos;m Ashish Maurya. A passionate Developer and a
+                Programmer based in the India.
               </Typography>
             </Box>
 
