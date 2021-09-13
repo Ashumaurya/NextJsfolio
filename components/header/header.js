@@ -2,7 +2,6 @@ import { Grid, Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { styled } from "@mui/material/styles";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import CoverImage from "../../public/images/CoverPhoto.png";
 import CoverLight from "../../public/images/CoverPhotoLight.png";
 import CoverDark from "../../public/images/CoverPhotoDarkBright.png";
 import styles from "../header/header.module.css";
@@ -10,7 +9,7 @@ import Image from "next/image";
 import { useContext } from "react";
 import { DarkMode } from "../../pages/api/theme";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
-
+import React from "react";
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
@@ -58,8 +57,8 @@ const Header = () => {
   return (
     <Box sx={{ flexGrow: 1, padding: "2rem" }}>
       <Grid container spacing={3}>
-        <Grid item lg={1} xs={0}></Grid>
-        <Grid item md={8} lg={4} xs={12}>
+        {/* <Grid item lg={1} xs={0}></Grid> */}
+        <Grid item md={10} lg={6} xs={12}>
           <Box
             sx={{
               flexGrow: 1,
