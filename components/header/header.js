@@ -10,12 +10,6 @@ import { useContext } from "react";
 import { DarkMode } from "../../pages/api/theme";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import React from "react";
-const Item = styled(Paper)(({ theme }) => ({
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.primary,
-}));
 
 const Circle = styled(Paper)(({ theme }) => ({
   height: "4rem",
