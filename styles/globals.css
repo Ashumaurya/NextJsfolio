@@ -148,3 +148,19 @@ table {
 /* .MuiDrawer-paper {
   width: 100% !important;
 } */
+
+.profile_rounded {
+  display: inline-block;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -khtml-border-radius: 50%;
+  border: 3px solid #fff;
+}
+.profile_rounded img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -khtml-border-radius: 50%;
+  vertical-align: middle;
+}
