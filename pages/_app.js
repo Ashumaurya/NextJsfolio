@@ -1,7 +1,6 @@
 import Head from "next/head";
-import ThemeChanger from "./api/theme";
+import ThemeChanger from "../context/theme";
 import "../styles/globals.css";
-import Layout from "../components/layout/layout";
 import { Box, Paper } from "@mui/material";
 function MyApp({ Component, pageProps }) {
   return (
@@ -16,10 +15,8 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <ThemeChanger>
         <Box sx={{ flexGrow: "auto" }}>
-          <Paper square elevation={0}>
-            <Layout>
-              <Component {...pageProps} />
-            </Layout>
+          <Paper square elevation={0} sx={{ height: "100vh", width: "100vw" }}>
+            <Component {...pageProps} />
           </Paper>
         </Box>
       </ThemeChanger>

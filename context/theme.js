@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import {
   createTheme,
   responsiveFontSizes,
@@ -6,6 +6,10 @@ import {
 } from "@mui/material/styles";
 
 export const DarkMode = createContext();
+
+export const useDarkMode = () => {
+  return useContext(DarkMode);
+};
 
 const ThemeChanger = ({ children }) => {
   const [isDarkMode, setIsDark] = useState(false);
@@ -16,9 +20,13 @@ const ThemeChanger = ({ children }) => {
     },
   });
 
+  const value = {
+    isDarkMode,
+    setIsDark,
+  };
   theme = responsiveFontSizes(theme);
   return (
-    <DarkMode.Provider value={[isDarkMode, setIsDark]}>
+    <DarkMode.Provider value={value}>
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </DarkMode.Provider>
   );
