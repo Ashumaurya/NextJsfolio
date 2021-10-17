@@ -1,7 +1,6 @@
 import { styled } from "@mui/material/styles";
 import { Box } from "@mui/material";
 import Head from "next/head";
-import ThemeSwitch from "../components/themeSwitch";
 import Navbar from "../components/navbar";
 import AboutMe from "../components/aboutme";
 import LinkContainer from "../components/linkcontainer";
