@@ -30,7 +30,12 @@ const AboutMe = () => {
           }}
         >
           <Box sx={{ borderRadius: "50%" }}>
-            <Image src="/images/Profile.jpeg" width={200} height={200} />
+            <Image
+              src="/images/Profile.jpeg"
+              width={200}
+              height={200}
+              alt="Profile Picture"
+            />
           </Box>
           <Typography
             variant="h6"
