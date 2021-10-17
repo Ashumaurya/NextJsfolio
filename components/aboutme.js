@@ -35,6 +35,7 @@ const AboutMe = () => {
               width={200}
               height={200}
               alt="Profile Picture"
+              style={{ borderRadius: "50%" }}
             />
           </Box>
           <Typography
